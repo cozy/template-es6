@@ -22,3 +22,7 @@ exports.config =
         templates:
             defaultExtension: 'jade'
             joinTo: 'javascripts/app.js'
+
+    plugins:
+        babel:
+            pattern: /\.es6$/
