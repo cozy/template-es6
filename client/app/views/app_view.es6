@@ -3,7 +3,7 @@ import template from './templates/home'
 
 export default class AppView extends BaseView {
 
-  constructor () {
+  constructor() {
     super();
 
   /*
@@ -18,7 +18,7 @@ export default class AppView extends BaseView {
     this.template = template;
   }
 
-  afterRender () {
+  afterRender() {
     console.log('write more code here !');
   }
 };

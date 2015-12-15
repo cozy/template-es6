@@ -2,7 +2,7 @@ import Router from 'router'
 
 export default class app {
 
-  constructor () {
+  constructor() {
 
     // Routing management
     this.router = new Router();
