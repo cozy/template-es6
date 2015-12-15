@@ -1,5 +1,5 @@
-import BaseView from '../lib/base_view'
-import template from './templates/home'
+import BaseView from '../lib/base_view';
+import template from './templates/home';
 
 export default class AppView extends BaseView {
 
@@ -21,4 +21,4 @@ export default class AppView extends BaseView {
   afterRender() {
     console.log('write more code here !');
   }
-};
+}

@@ -1,5 +1,5 @@
 /* eslint new-cap:0 */
-import BaseView from 'lib/base_view'
+import BaseView from 'lib/base_view';
 
 // View that display a collection of subitems
 // used to DRY views
@@ -93,4 +93,4 @@ export default class ViewCollection extends BaseView {
     delete this.views[model.cid];
     this.onChange(this.views);
   }
-};
+}

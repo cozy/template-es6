@@ -1,9 +1,8 @@
-import Router from 'router'
+import Router from 'router';
 
 export default class app {
 
   constructor() {
-
     // Routing management
     this.router = new Router();
     Backbone.history.start();

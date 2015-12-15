@@ -1,7 +1,7 @@
 
 export default class BaseView extends Backbone.View {
 
-  template () {
+  template() {
     return '';
   }
 

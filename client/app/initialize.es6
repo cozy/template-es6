@@ -1,6 +1,6 @@
-import Application from 'application'
+import Application from 'application';
 
 // The function called from index.html
 $(() => {
-  new Application();
+  window.app = new Application();
 });
