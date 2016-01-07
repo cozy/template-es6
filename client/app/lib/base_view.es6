@@ -5,9 +5,7 @@ export default class BaseView extends Backbone.View {
     return '';
   }
 
-  getRenderData() {
-    return { model: JSON.stringify(this.model) };
-  }
+  getRenderData() { return null; }
 
   render() {
     this.beforeRender();

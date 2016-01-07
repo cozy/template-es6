@@ -21,7 +21,6 @@ export default class ViewCollection extends BaseView {
     this.itemview = {};
 
     this.views = {};
-    this.views = {};
     this.listenTo(this.collection, 'reset', this.onReset);
     this.listenTo(this.collection, 'add', this.addItem);
     this.listenTo(this.collection, 'remove', this.removeItem);
