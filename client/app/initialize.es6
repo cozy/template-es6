@@ -1,7 +1,6 @@
-const app = require('application');
+import Application from 'application';
 
 // The function called from index.html
 $(() => {
-  require('lib/app_helpers');
-  app.initialize();
+  window.app = new Application();
 });

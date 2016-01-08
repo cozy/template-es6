@@ -1,12 +1,15 @@
-const AppView = require('views/app_view');
+import AppView from 'views/app_view';
 
-module.exports = class Router extends Backbone.Router {
-    routes: {
-        '': 'main',
-    }
+export default class Router extends Backbone.Router {
 
-    main() {
-      const mainView = new AppView();
-      mainView.render();
-    }
-};
+  get routes() {
+    return {
+      '': 'main',
+    };
+  }
+
+  main() {
+    const mainView = new AppView();
+    mainView.render();
+  }
+}

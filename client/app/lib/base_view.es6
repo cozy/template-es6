@@ -1,13 +1,11 @@
-module.exports = class BaseView extends Backbone.View {
-  constructor() {
-    super();
+
+export default class BaseView extends Backbone.View {
+
+  template() {
+    return '';
   }
 
-  template() {}
-
-  getRenderData() {
-    return { model: this.model.toJSON() };
-  }
+  getRenderData() { return null; }
 
   render() {
     this.beforeRender();
@@ -26,4 +24,4 @@ module.exports = class BaseView extends Backbone.View {
     this.remove();
     Backbone.View.prototype.remove.call(this);
   }
-};
+}

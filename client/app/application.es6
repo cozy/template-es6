@@ -1,11 +1,9 @@
-module.exports = {
+import Router from 'router';
 
-  initialize: () => {
-    // Used in inter-app communication
-    // SocketListener = require('../lib/socket_listener');
+export default class app {
 
+  constructor() {
     // Routing management
-    const Router = require('router');
     this.router = new Router();
     Backbone.history.start();
 
@@ -13,5 +11,5 @@ module.exports = {
     if (typeof Object.freeze === 'function') {
       Object.freeze(this);
     }
-  },
-};
+  }
+}

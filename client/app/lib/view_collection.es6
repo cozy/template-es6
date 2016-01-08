@@ -1,5 +1,5 @@
 /* eslint new-cap:0 */
-const BaseView = require('lib/base_view');
+import BaseView from 'lib/base_view';
 
 // View that display a collection of subitems
 // used to DRY views
@@ -14,10 +14,17 @@ const BaseView = require('lib/base_view');
 // collectionEl : the DOM element's selector where the itemViews will
 //                be displayed. Automatically falls back to el if null
 
-module.exports = class ViewCollection extends BaseView {
-  itemview: {}
+export default class ViewCollection extends BaseView {
+  // bind listeners to the collection
+  constructor() {
+    super();
+    this.itemview = {};
 
-  views: {}
+    this.views = {};
+    this.listenTo(this.collection, 'reset', this.onReset);
+    this.listenTo(this.collection, 'add', this.addItem);
+    this.listenTo(this.collection, 'remove', this.removeItem);
+  }
 
   template() {
     return '';
@@ -35,15 +42,6 @@ module.exports = class ViewCollection extends BaseView {
   // can be overriden if we want to place the subviews somewhere else
   appendView(view) {
     this.$collectionEl.append(view.el);
-  }
-
-  // bind listeners to the collection
-  constructor() {
-    super();
-    this.views = {};
-    this.listenTo(this.collection, 'reset', this.onReset);
-    this.listenTo(this.collection, 'add', this.addItem);
-    this.listenTo(this.collection, 'remove', this.removeItem);
   }
 
   // if we have views before a render call, we detach them
@@ -94,4 +92,4 @@ module.exports = class ViewCollection extends BaseView {
     delete this.views[model.cid];
     this.onChange(this.views);
   }
-};
+}
