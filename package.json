@@ -16,8 +16,9 @@
     "cozydb": "0.1.3"
   },
   "devDependencies": {
-    "babel": "^5.8.23",
+    "babel-cli": "6.5.1",
     "babel-eslint": "^4.1.3",
+    "babel-preset-es2015": "6.5.0",
     "cozy-fixtures": "1.1.3",
     "del": "^2.0.2",
     "eslint-config-airbnb": "^0.1.0",
@@ -35,6 +36,11 @@
     "lint": "gulp lint",
     "test": "gulp test",
     "start": "babel-node server.es6"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   },
   "cozy-permissions": {},
   "cozy-displayName": "Template"
