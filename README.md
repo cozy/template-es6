@@ -10,10 +10,10 @@ http://cozy.io/hack/getting-started/
 
 Clone this repository, install dependencies and run server (it requires Node.js)
 
-    git clone git://github.com/cozy/cozy-template-es6.git
-    cd cozy-template-es6
+    git clone https://github.com/cozy/template-es6
+    cd template-es6
     npm install
-    babel-node server.es6
+    npm start
 
 If you want to build the application, be sure client side dependencies are installed
 
